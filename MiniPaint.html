@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mini Photo Editor</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="MiniPaint.css">
+		<script type="text/javascript" src="MiniPaint.js"></script>
+	</head>
+	<body>
+		<div id="tools">
+			<div id="left-tools">
+				<span><img class="tool" src="media/images/crop.jpg" draggable="false" onclick="toggleCrop(this)" /> </span>
+				<span><img class="tool" src="media/images/scale.jpg"  draggable="false" onclick="toggleScale(this)" /> </span>
+			</div>
+			<div id="middle-tools">
+				<span><img class="tool" src="media/images/pencil.jpg"  draggable="false" onclick="togglePencil(this)" /></span>
+				<span><img class="tool" src="media/images/line.jpg"  draggable="false" onclick="toggleLine(this)" /></span>
+				<span><img class="tool" src="media/images/circle.jpg"  draggable="false" onclick="toggleCircle(this)" /></span>
+				<span><img class="tool" src="media/images/selection.jpg"  draggable="false" onclick="toggleSelection(this)" /></span>
+				<span><img class="tool" src="media/images/rectangle.jpg"  draggable="false" onclick="toggleRectangle(this)" /></span>
+				<span><img class="tool" src="media/images/eraser.jpg"  draggable="false" onclick="toggleEraser(this)"/></span>			
+			</div>
+			<div id="right-tools">
+				<span><img class="tool" src="media/images/soundOff.jpg"  draggable="false" onclick="soundOnOff(this)"></span>
+			</div>
+		</div>
+		<canvas id="canvas">
+		</canvas>
+		<div id="options">
+			<label for="width">Width</label>
+			<input type="number" name="width" value="2" min="0" max="100" id="lineWidth">
+			<label for="lineColor">Color:</label>
+			<input type="color" name="lineColor" value="#000" id="lineColor">
+			<div id="circleInfo">
+				<label for="circle">Perfect circle:</label>
+				<span id="circle">No</span>
+				<label for="circle" style="font-size: 30px; text-align: center;"> &#11020 :</label>
+				<span id="radiusX" style="text-align: left; line-height: 30px;">-</span>
+				<label for="circle" style="font-size: 30px; text-align: center;"> &#11021 :</label>
+				<span id="radiusY" style="text-align: left; line-height: 30px;">-</span>
+			</div>
+			<input type="button" id="clearCanvasBtn" onclick="clearCanvas(true)" value="Clear canvas">
+			<a id="saveImage"><input type="button" name="save" onclick="saveImage()" value="Save image"></a>
+			<input type="button" name="crop" id="crop" value="Finish cropping" onclick="finishCropping()" />
+		</div>
+		<div id="scale-options">
+			<input type="button" onclick="scale()" value="scale" />
+			<input type="button" onclick="reset()" value="reset" />
+		</div>
+	</body>
+</html>

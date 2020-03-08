@@ -1,0 +1,121 @@
+html, body{
+	margin:0;
+	width: 100%;
+	height: 100%;
+	background-color: #DDDDDD; 
+}
+#canvas{	
+	border: 1px solid black;
+	margin-left: 25px;
+	margin-top:25px;
+	float: left;
+	background-color: #fff; 
+}
+#tools{
+	position: relative;
+	width: 100%;
+	border: 1px solid black;
+	background-color: #FAFAB2;
+}
+#tools>div{
+	display: inline;
+}
+#tools img{
+	width: 3%;
+	height: 100%;
+	border-right: 2px solid gray;
+	padding: 0 2px 2px 0;
+}
+#tools img:hover{
+	box-shadow: 3px 3px 5px black;
+	cursor: pointer;
+}
+.activeTool{
+	box-shadow: 3px 3px 5px black;
+}
+#left-tools span img
+{
+	width: 8%;	
+}
+#left-tools{
+	margin-left: 0px; 
+}
+#middle-tools{
+	margin-left: 25%;
+}
+#middle-tools span:last-child img, #left-tools span:last-child img{
+	border-right: none;
+}
+#right-tools{
+	position: absolute;
+	width: 3%;
+	height: 100%;
+	right: 5px;
+	
+}
+#right-tools img{
+	width: 100%;
+	border-right: none;
+}
+#options, #scale-options{
+	width: 30%;
+	float: left;
+	margin-top: 25px;
+	margin-left: 25px; 
+	border:1px solid black;
+	padding: 25px;
+	border-radius: 1rem;
+	background: linear-gradient(to bottom right,blue,cyan,blue);	
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+#scale-options{
+	display: none;
+}
+#options label{
+	display: block;
+            float: left;
+            width: 40%;
+            clear: both;
+            margin-top :5px;
+}
+#options input, #options span{
+	display: block;
+	float:right;
+	width: 50%;
+	margin-top:5px;
+}
+#options input[id=radius],#options label[for=radius]
+{
+	display: none;
+}
+
+#options input[type=button]
+{
+	width: 100%;
+	background: linear-gradient(to bottom right, gray, white,gray) ; 
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	padding: 2px;
+	margin: 5px;
+	border-radius: 1em;
+}
+#options input[type=button]:hover{
+	cursor: pointer;
+	background: linear-gradient(to bottom right, black, white,black);
+}
+#options input[type=color]{
+	background-color: transparent; 
+	border-radius: 1em; 
+}
+#options input[type=color]:hover{
+	background-color: cyan; 
+	cursor: pointer;
+}
+#options input[id=crop]
+{
+	display: none;
+}
+#circleInfo{
+	display: none;
+}
+
+

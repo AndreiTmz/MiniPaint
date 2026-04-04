@@ -1,51 +1,42 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Mini Photo Editor</title>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" href="MiniPaint.css">
-		<script type="text/javascript" src="MiniPaint.js"></script>
-	</head>
-	<body>
-		<div id="tools">
-			<div id="left-tools">
-				<span><img class="tool" src="media/images/crop.jpg" draggable="false" onclick="toggleCrop(this)" /> </span>
-				<span><img class="tool" src="media/images/scale.jpg"  draggable="false" onclick="toggleScale(this)" /> </span>
+<head>
+	<title>Mini Paint Application</title>
+	<link rel="stylesheet" href="MiniPaint.css" />
+	<link rel="icon" type="image/png" href="media/images/pencil.jpg">
+	<script src="MiniPaint.js"></script>
+	<meta charset="utf-8">
+</head>
+<body>
+	<div class="flexContainer">
+		<div class="leftMenu">
+			<div id="tools">
+				<img src="media/images/pencil.jpg" class="tool active" name="pencil" />
+				<img src="media/images/eraser.jpg" class="tool" name="eraser" />
+				<img src="media/images/line.jpg" class="tool" name="line" />
+				<img src="media/images/circle.jpg" class="tool" name="ellipse" />
+				<img src="media/images/rectangle.jpg" class="tool" name="rectangle" />
+				<img src="media/images/soundOn.jpg" class="tool" name="toggleSound" id="toggleSound" />
 			</div>
-			<div id="middle-tools">
-				<span><img class="tool" src="media/images/pencil.jpg"  draggable="false" onclick="togglePencil(this)" /></span>
-				<span><img class="tool" src="media/images/line.jpg"  draggable="false" onclick="toggleLine(this)" /></span>
-				<span><img class="tool" src="media/images/circle.jpg"  draggable="false" onclick="toggleCircle(this)" /></span>
-				<span><img class="tool" src="media/images/selection.jpg"  draggable="false" onclick="toggleSelection(this)" /></span>
-				<span><img class="tool" src="media/images/rectangle.jpg"  draggable="false" onclick="toggleRectangle(this)" /></span>
-				<span><img class="tool" src="media/images/eraser.jpg"  draggable="false" onclick="toggleEraser(this)"/></span>			
+			<div id="settings">
+				<p>Width <span class="rangeLabel" id="widthRangeLabel">5</span></p>
+				<input type="range" name="width" min="1" max="50" value="5" class="settings" id="width">
+				<p>Color</p>
+				<input type="color" name="color" id="color" class="settings">
 			</div>
-			<div id="right-tools">
-				<span><img class="tool" src="media/images/soundOff.jpg"  draggable="false" onclick="soundOnOff(this)"></span>
+			<div class="leftMenuFooter">
+				<p>Mini Paint ®</p>
 			</div>
 		</div>
-		<canvas id="canvas">
-		</canvas>
-		<div id="options">
-			<label for="width">Width</label>
-			<input type="number" name="width" value="2" min="0" max="100" id="lineWidth">
-			<label for="lineColor">Color:</label>
-			<input type="color" name="lineColor" value="#000" id="lineColor">
-			<div id="circleInfo">
-				<label for="circle">Perfect circle:</label>
-				<span id="circle">No</span>
-				<label for="circle" style="font-size: 30px; text-align: center;"> &#11020 :</label>
-				<span id="radiusX" style="text-align: left; line-height: 30px;">-</span>
-				<label for="circle" style="font-size: 30px; text-align: center;"> &#11021 :</label>
-				<span id="radiusY" style="text-align: left; line-height: 30px;">-</span>
+		<div class="workingArea">
+			<div>
+				<canvas width="1175" height="700"></canvas>
 			</div>
-			<input type="button" id="clearCanvasBtn" onclick="clearCanvas(true)" value="Clear canvas">
-			<a id="saveImage"><input type="button" name="save" onclick="saveImage()" value="Save image"></a>
-			<input type="button" name="crop" id="crop" value="Finish cropping" onclick="finishCropping()" />
+			<div class="rightMenu">
+				<img src="media/images/save.jpg" class="tool" name="saveImage" id="saveImage" />
+				<img src="media/images/bin.jpg" class="tool" name="clearCanvas" id="clearCanvas" />
+			</div>
 		</div>
-		<div id="scale-options">
-			<input type="button" onclick="scale()" value="scale" />
-			<input type="button" onclick="reset()" value="reset" />
-		</div>
-	</body>
+	</div>
+</body>
 </html>

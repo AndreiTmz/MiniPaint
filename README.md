@@ -117,5 +117,5 @@ npx serve
 
 This project is open-source and available under the **MIT License**.
 
-<a href="https://andreitmz.github.io/MiniPaint/" target="_blank">## 🌐 Click here for Live Demo</a>
+## 🌐 [Click here for Live Demo](https://andreitmz.github.io/MiniPaint/)
 ⭐ If you like this project, consider giving it a star!

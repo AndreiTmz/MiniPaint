@@ -104,6 +104,7 @@ npx serve
 * Add undo/redo functionality
 * Implement fill (bucket) tool
 * Export in multiple formats (PNG, SVG)
+* Add touch support for mobile devices
 * Keyboard shortcuts
 
 ## 🧠 Learning Outcomes

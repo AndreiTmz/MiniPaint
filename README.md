@@ -75,7 +75,7 @@ The application is divided into three main sections:
 ```
 MiniPaint/
 │
-├── MiniPaint.html
+├── index.html
 ├── MiniPaint.css
 ├── MiniPaint.js
 │

@@ -11,6 +11,7 @@ function app()
 	var currentTool = "pencil";
 	var isMouseDown = 0;
 	var width = 5;
+	context.lineWidth = width;
 	const buttonSound = document.createElement("audio");
 	buttonSound.src = "media/sounds/button.mp3";
 

@@ -70,22 +70,6 @@ The application is divided into three main sections:
 * Canvas state is preserved using `getImageData()` and restored during shape previews.
 * Separate logic is implemented for each drawing tool.
 
-## 📂 Project Structure
-
-```
-MiniPaint/
-│
-├── index.html
-├── MiniPaint.css
-├── MiniPaint.js
-│
-├── media/
-│   ├── images/
-│   └── sounds/
-│
-└── README.md
-```
-
 ## ▶️ Getting Started
 
 1. Clone the repository:

@@ -113,6 +113,11 @@ npx serve
 * Managing application state
 * Structuring and styling small front-end applications
 
+## 🌐 Live Demo
+
+👉 https://andreitmz.github.io/MiniPaint/
+
+
 ## 📄 License
 
 This project is open-source and available under the **MIT License**.

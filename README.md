@@ -100,7 +100,7 @@ git clone https://github.com/AndreiTmz/MiniPaint.git
 cd MiniPaint
 ```
 
-3. Open `MiniPaint.html` in your browser.
+3. Open `index.html` in your browser.
 
 If you encounter the error **"Unsafe attempt to load URL"** in the browser console, it is caused by browser security restrictions when opening files locally.
 
